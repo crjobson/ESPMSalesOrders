@@ -37,12 +37,12 @@
       "description": "SAPUI5 Test Resources"
     },
     {
-      "path": "/ESPM_V1",
+      "path": "/ESPM",
       "target": {
         "type": "destination",
-        "name": "ESPM_V1"
+        "name": "ESPM"
       },
-      "description": "ESPM_V1"
+      "description": "ESPM"
     }
   ],
   "cacheControl": [

@@ -49,6 +49,44 @@ sap.ui.define([
 				);
 			},
 
+			/**
+			 * Event handler when Share to C2G is clicked
+			 * @public
+			 */
+			onShareToC2GPress: function (oEvent) {
+				var oModel = sap.ui.getCore().getModel("global");
+				var sUsername = oModel.getProperty("/username");
+			
+				var url = "/mobileservices/origin/hcpms/CARDS/v1/register/templated";
+				var bodyJson = {
+					"method": "REGISTER",
+					"link": window.location.href,
+					"match": window.location.hash.substring(1),  // remove leading #
+					"username": sUsername
+				};
+
+				jQuery.ajax({
+					url : url,
+					async : true,
+					type: "POST",
+					data:  JSON.stringify(bodyJson),
+					headers: {
+						'content-type': 'application/json'
+					},
+					success : function(data, textStatus, xhr) {
+						if (xhr.status === 201) {
+							sap.m.MessageToast.show("Successfully added Card");
+						} else if (xhr.status === 200) {
+							sap.m.MessageToast.show("Card has already been added");
+						} else {
+							sap.m.MessageToast.show("This Card cannot be added");
+						}
+					},
+					error : function(xhr, textStatus, error) {
+						sap.m.MessageToast.show("This Card cannot be added");
+					}
+				});
+			},
 
 			/**
 			 * Updates the item count within the line item table's header

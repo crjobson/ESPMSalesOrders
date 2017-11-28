@@ -104,6 +104,9 @@
 				id="shareEmail"
 				press="onShareEmailPress"/>
 		</semantic:sendEmailAction>
+		<semantic:customFooterContent>
+			<Button text="Share to C2G" press="onShareToC2GPress"/>
+		</semantic:customFooterContent>
 
 	</semantic:DetailPage>
 

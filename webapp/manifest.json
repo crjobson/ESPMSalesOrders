@@ -1,7 +1,7 @@
 {
 	"_version": "1.4.0",
 	"sap.app": {
-		"id": "salesorders",
+		"id": "espm.salesorders",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"title": "{{appTitle}}",
@@ -11,7 +11,7 @@
 		},
 		"dataSources": {
 			"mainService": {
-				"uri": "/ESPM_V1/ESPM_V1/api/",
+				"uri": "/ESPM/SampleServices/ESPM.svc/",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",

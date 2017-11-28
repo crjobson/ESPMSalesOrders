@@ -13,7 +13,7 @@
       "test.html"
     ],
     "buildRequired": false,
-    "lastBuildDateTime": "Fri, 16 Jun 2017 17:25:20 GMT"
+    "lastBuildDateTime": "Tue, 28 Nov 2017 17:49:05 GMT"
   },
   "dataBinding": {
     "/webapp/view/App.view.xml": {
@@ -69,8 +69,8 @@
     "blockPushLevel": "Error"
   },
   "hcpdeploy": {
-    "account": "a8af3c52a",
+    "account": "hanamobile",
     "name": "espmsalesorders",
-    "lastVersionWeTriedToDeploy": "1.0.0"
+    "lastVersionWeTriedToDeploy": "1.0.1"
   }
 }

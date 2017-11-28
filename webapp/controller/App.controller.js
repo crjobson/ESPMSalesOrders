@@ -34,8 +34,25 @@ sap.ui.define([
 
 				// apply content density mode to root view
 				this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+				
+				var oModel = new sap.ui.model.json.JSONModel({"username": null});
+				
+				sap.ui.getCore().setModel(oModel, "global");
+			
+				jQuery.ajax({
+					url : " /services/userapi/currentUser",
+					async : false,
+					type: "GET",
+					headers: {
+						'accept': 'application/json'
+					},
+					success : function(data, textStatus, xhr) {
+						oModel.setProperty("/username", data.name);
+					},
+					error : function(xhr, textStatus, error) {
+					}
+				});
 			}
-
 		});
 
 	}
