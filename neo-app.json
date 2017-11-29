@@ -1,5 +1,14 @@
 {
   "routes": [
+  	{
+		"path": "/mobileservices",
+		"target": {
+			"type": "destination",
+			"name": "SAP_C2G",
+			"entryPath": "mobileservices"
+		},
+		"description": "SAP_C2G"
+	}, 
     {
       "path": "/webapp/resources",
       "target": {
@@ -36,6 +45,14 @@
       },
       "description": "SAPUI5 Test Resources"
     },
+    {
+		"path": "/services/userapi",
+		"target": {
+			"type": "service",
+			"name": "userapi"
+		},
+		"description": "User API"
+	},
     {
       "path": "/ESPM",
       "target": {
